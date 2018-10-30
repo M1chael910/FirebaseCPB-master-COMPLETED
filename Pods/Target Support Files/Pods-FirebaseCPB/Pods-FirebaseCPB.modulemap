@@ -1,0 +1,6 @@
+framework module Pods_FirebaseCPB {
+  umbrella header "Pods-FirebaseCPB-umbrella.h"
+
+  export *
+  module * { export * }
+}
