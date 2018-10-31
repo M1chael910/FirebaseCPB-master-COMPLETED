@@ -12,7 +12,14 @@ import Foundation
 import UIKit
 
 class College {
-    var name: String = ""
-    var amountOfStudents: Int = 0
-    var url: String = ""
+    var name: String
+    var amountOfStudents: Int
+    var url: String
+    
+    
+    init(name: String, amountOfStudents: Int, url: String) {
+        self.name = name
+        self.amountOfStudents = amountOfStudents
+        self.url = url
+    }
 }

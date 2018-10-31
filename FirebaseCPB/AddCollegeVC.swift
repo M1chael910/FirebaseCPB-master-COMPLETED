@@ -67,7 +67,7 @@ class AddCollegeVC: UIViewController {
     
     @IBAction func saveBtnPressed(_ sender: UIButton) {
         print("pressed")
-        let newCollege = College()
+        let newCollege = College(name: "", amountOfStudents: 0, url: "")
         saveProperties(for: newCollege)
         docRef = db.document("colleges/\(newCollege.name)")
         let collegeToSave: [String : Any] = ["name": newCollege.name, "amountOfStudents" : newCollege.amountOfStudents, "website" : newCollege.url]

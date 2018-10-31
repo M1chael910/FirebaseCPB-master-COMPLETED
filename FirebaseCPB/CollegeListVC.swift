@@ -47,6 +47,27 @@ class CollegeListVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             
             if let snapshot = querySnapshot {
                 for document in snapshot.documents {
+                    let newData = document.data()
+                    let newCollege = College(name: "", amountOfStudents: 0, url: "")
+                    
+                    for college in newData {
+                        switch college.key {
+                        case "name":
+                            newCollege.name = college.value as! String
+                        case "amountOfStudents":
+                            newCollege.amountOfStudents = college.value as! Int
+                        case "website":
+                            newCollege.url = college.value as! String
+                            
+                        default:
+                           print("didnt work")
+                        }
+                        
+                        
+                        
+                    }
+                    
+                    
                     
                     
                     
